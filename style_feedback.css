@@ -1,0 +1,22 @@
+@import url("style.css");
+.main-information_feedback {
+    display: block;
+    text-align: center;
+    font-size: 2em;
+    background-image: none;
+    min-height:800px;
+}
+
+.main-information__form {
+    font-size: 0.8em;
+    border: 4px dotted rgb(121, 113, 8);
+    display: block;
+    padding: 20px;
+    width: 95%;
+    margin: 0 auto;
+    height:800px;
+}
+
+input[form="form"] {
+    font-family: "Historic_font";
+}

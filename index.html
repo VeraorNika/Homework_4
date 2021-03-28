@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Личный сайт учителя истории">
+    <meta name="keywords" content="история, личный сайт, учитель, школа № 180, Иванов Иван">
+    <meta name="author" content="Frolagina Veronika">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_mainpage.css" type="text/css">
+    <link rel="icon" href="icon_kolizey.png">
+    <title>Mistery Of History.ru</title>
+</head>
+
+<body>
+    <header>
+        <p class="header__beginning"> <span class="title"> Личный сайт учителя истории </span> </p>
+        <hr class="header__hr-line">
+        <div class="wrapper-flex">
+            <input type="text" placeholder="Поиск по сайту" class="header__search">
+            <p class="header__quote"> Народ, не знающий своего прошлого, не имеет будущего
+                <br> Ломоносов М.В
+            </p>
+        </div>
+    </header>
+    <ul class="menu">
+        <li class="menu__item"><a href="index.html">Главная</a></li>
+        <li class="menu__item"><a href="personal_information.html">Обо мне</a></li>
+        <li class="menu__item  dropdown"><a href="school_life.html">Школьная жизнь</a>
+            <div class="dropdown-content"> <a href="#">Олимпиады</a> <a href="#">Мероприятия</a> <a
+                    href="#">Расписание</a> </div>
+        </li>
+        <li class="menu__item dropdown"> <a href="articles.html">Статьи</a>
+            <div class="dropdown-content"> <a href="#">История России</a> <a href="#">Всемирная история</a> <a
+                    href="#">Обществознание</a> </div>
+        </li>
+        <li class="menu__item"><a href="feedback.html">Связь со мной</a></li>
+    </ul>
+    <div class="galery"></div>
+    <div class="main-information">
+        <div class="main-information__greeting"> *немного улучшен стиль<br>
+            *добавлены веб-шрифты<br>
+            *добавлена анимация при загрузке страницы<br>
+            *страница "Связь со мной" содержит форму, которая при неправильном вводе/отсутствии ввода выводит ошибку<br>
+            *неправильное имя: <=2 символов, неправильное сообщение: <=30 символов <br>
+            *регулярные выражения для проверки телефона и email. Проверка игнорируется без нажатия кнопки для обратной связи<br>
+        *кнопка обратной связи реагирует на отсутствие  и неправильное написание телефона или email<br>
+        *для обработки "неизвестной ошибки" введите неправильный email: проброс исключения email-a сам происходит с ошибкой
+     </div>
+                <div class="main-information__personal-information"><img src="teacher.jpg" alt="Личное фото"
+                        class="main-information__personal-information-photo" width=100% title="На уроке">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus nihil asperiores rerum iure id
+                        qui, accusantium nulla dolore voluptates quae!</p>
+                </div>
+        </div>
+        <footer>Электронная почта: teacher-of-history@yandex.ru</footer>
+</body>
+
+</html>

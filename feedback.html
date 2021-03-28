@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Личный сайт учителя истории">
+    <meta name="keywords" content="история, личный сайт, учитель, школа № 180, Иванов Иван">
+    <meta name="author" content="Frolagina Veronika">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_feedback.css" type="text/css">
+    <link rel="icon" href="icon_kolizey.png">
+    <script src="Errors.js"></script>
+    <title>Отзывы</title>
+</head>
+
+<body>
+    <header>
+        <p class="header__beginning"> <span class="title"> Личный сайт учителя истории </span> </p>
+        <hr class="header__hr-line">
+        <div class="wrapper-flex">
+            <input type="text" placeholder="Поиск по сайту" class="header__search">
+            <p class="header__quote"> Народ, не знающий своего прошлого, не имеет будущего
+                <br> Ломоносов М.В
+            </p>
+        </div>
+    </header>
+    <ul class="menu">
+        <li class="menu__item"><a href="index.html">Главная</a></li>
+        <li class="menu__item"><a href="personal_information.html">Обо мне</a></li>
+        <li class="menu__item  dropdown"><a href="school_life.html">Школьная жизнь</a>
+            <div class="dropdown-content"> <a href="#">Олимпиады</a> <a href="#">Мероприятия</a> <a
+                    href="#">Расписание</a> </div>
+        </li>
+        <li class="menu__item dropdown"> <a href="articles.html">Статьи</a>
+            <div class="dropdown-content"> <a href="#">История России</a> <a href="#">Всемирная история</a> <a
+                    href="#">Обществознание</a> </div>
+        </li>
+        <li class="menu__item"><a href="feedback.html">Связь со мной</a></li>
+    </ul>
+    <div class="main-information main-information_feedback">
+        Здесь вы можете связаться со мной
+        <form class="main-information__form" id="main-information__form" name="form">
+
+        Ваше имя*:<br>
+        <input type="text" placeholder="Введите Ваше имя" name="name">
+        <br><br>
+        Тема сообщения*:
+        <br>
+        <select size="7" name="theme">
+            <option disabled>Выберите тему</option>
+            <option>Учеба</option>
+            <option>Классное руководство</option>
+            <option>Олимпиады и конкурсы</option>
+            <option>Внеучебная деятельность</option>
+            <option>Отзыв о сайте</option>
+            <option>Другое</option>
+        </select>
+        <br><br>
+        Сообщение*:<br>
+        <textarea placeholder="Сообщение" name="message"></textarea>
+        <br><br>
+        Ваш email:<br>
+        <input type="email" placeholder="Введите электронную почту" name="email">
+        <br><br>Номер телефона:<br>
+        <input type="tel" autocomplete="on" name="phone">
+        <br><br>Получить обратную связь: <input type="checkbox" name="respond">
+        <br><br>
+        <button onclick="javascript:validateForm()" name="submit">Отправить</button>
+        <input type="reset" name="reset">
+        </form>
+    </div>
+    <footer>Электронная почта: teacher-of-history@yandex.ru</footer>
+</body>
+
+</html>

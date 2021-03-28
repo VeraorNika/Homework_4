@@ -1,0 +1,224 @@
+@keyframes showOn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+html {
+    background-image: url(b.jpg);
+    background-size: contain;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+body {
+    margin: auto;
+    /*Для центрирования*/
+    width: 75%;
+    position: relative;
+    min-height: 100%;
+    font-family: "MarckScript-Regular";
+}
+
+header {
+    position: relative;
+    /*Для того, чтобы прижать цитату к низу*/
+    height: 100px;
+    padding: 4px;
+}
+
+header, footer {
+    /* #bd9951; */
+    color: #faf5eb;
+    background-image: linear-gradient(45deg, #523703, #bd9951, #523703);
+}
+
+.header__beginning {
+    text-align: center;
+    font-size: 30px;
+    font-style: oblique;
+    margin: 0;
+    animation: showOn 2s;
+    animation-timing-function: ease-in;
+    font-family: "Historic_font";
+}
+
+.header__hr-line {
+    margin: 0;
+    padding: 0;
+    height: 1px;
+    border: none;
+    border-top: 1px solid #333;
+}
+
+.header__search {
+    position: relative;
+    bottom: 20px;
+    height: 100%;
+    width: 20%;
+    align-self: center;
+    /* устанавливаем ширину элемента input  с указанным атрибутом и значением (type="text") */
+    transition: width 500ms ease-in-out;
+    /* Для свойства width мы устанавливаем длительность эффекта перехода равную 500 ms, при этом эффект перехода начинается с медленного старта и заканчивается медленно (ease-in-out) */
+}
+.header__search:focus{
+    width:40%;
+}
+.header__quote {
+    text-align: right;
+    font-size: 20px;
+    position: relative;
+    animation: showOn 2s;
+    animation-timing-function: ease-in;
+    /*прижать к низу цитату*/
+    bottom: 20px;
+    right: 0;
+    font-family: "MarckScript-Regular";
+    /*прижать к правому боку цитату*/
+}
+
+.wrapper-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.menu {
+    height: 70px;
+    background-color: #694c12;
+    /*  */
+    background-image: linear-gradient(45deg, #523703, #bd9951, #523703);
+    /* linear-gradient(45deg, #bd9951, #806022, #bd9951); */
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.menu__item {
+    width: 20%;
+    margin: 0px 5px;
+    height: 80%;
+    list-style-type: none;
+    /* border: 1px solid bisque; */
+    text-align: center;
+    font-size: 25px;
+    border-radius: 15px;
+    background-color: inherit;
+    animation: showOn 2s;
+    animation-timing-function: ease-in;
+}
+
+.menu__item a {
+    font-family: "Historic_font";
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #faf5eb;
+    line-height: 50px;
+    /*Возможно, текст полетит из-за этого. Сделано, чтобы отцентрировать по вертикали*/
+}
+
+.menu__item a:hover {
+    color: bisque;
+    transform: scale(1.1, 1.15);
+}
+
+.menu__item a:active {
+    color: #faf5eb;
+}
+
+/*Ссылка, из которой выпадает меню*/
+
+.dropdown {
+    position: relative;
+    /*чтобы работало Position:absolute Для блока с ссылками*/
+}
+
+/*Блок, содержащий список ссылок*/
+
+.dropdown-content {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    width: 100%;
+}
+
+/* Ссылки внутри выпадающего списка */
+
+.dropdown-content a {
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+.dropdown:hover {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-color: rgba(1, 1, 1, 0);
+}
+
+/* Изменение цвета выпадающих ссылок при наведении курсора */
+
+.dropdown-content a:hover {
+    background-color: inherit;
+}
+
+/* Показать выпадающее меню при наведении курсора */
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    flex-direction: column;
+    background-color: inherit;
+    border-right: inherit;
+    /* border-bottom: 1px solid bisque; */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.main-information {
+    display: flex;
+    background-color: #f7f1b5;
+    padding: 20px;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    margin-bottom: 10px;
+}
+footer {
+    box-sizing: border-box;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    font-size: 28px;
+    line-height: 50px;
+}
+
+@font-face {
+    font-family: "MarckScript-Regular";
+    src: url("MarckScript-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Historic_font";
+    src: url("Historic_font.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
