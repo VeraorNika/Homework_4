@@ -14,7 +14,7 @@ html {
     background-image: url(b.jpg);
     background-size: contain;
     background-attachment: fixed;
-    height: 100%;
+    min-height: 100%;
 }
 
 body {
